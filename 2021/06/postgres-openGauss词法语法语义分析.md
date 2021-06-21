@@ -172,3 +172,15 @@ https://www.gnu.org/software/bison/manual/bison.html
 
 http://jiayaowei.blogspot.com/search/label/lex%2Fyacc%E7%B3%BB%E5%88%97
 
+https://www.cnblogs.com/feishujun/p/PostgreSQLSourceAnalysis_query003.html
+
+https://www.jianshu.com/p/1c8183d93eae
+
+https://www.jianshu.com/p/c0ccf7da93ac
+
+http://blog.itpub.net/6906/viewspace-2641503/
+
+https://www.toutiao.com/a6745709931107713544/
+
+http://blog.itpub.net/6906/viewspace-2640937/
+
