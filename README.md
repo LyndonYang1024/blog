@@ -12,3 +12,7 @@
 
 ##### 2021-07-01: [raft-paxos](https://github.com/YangHao666666/blog/blob/master/%E5%88%86%E5%B8%83%E5%BC%8F%E7%9B%B8%E5%85%B3/%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AE/raft-paxos.md)
 
+##### 2021-07-02: [openGauss执行器流程](https://github.com/YangHao666666/blog/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%BA%90%E7%A0%81%E7%9B%B8%E5%85%B3/openGauss/openGauss%E6%89%A7%E8%A1%8C%E5%99%A8%E6%B5%81%E7%A8%8B.md)
+
+##### 2021-07-02: [openGauss优化器相关](https://github.com/YangHao666666/blog/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%BA%90%E7%A0%81%E7%9B%B8%E5%85%B3/openGauss/openGauss%E4%BC%98%E5%8C%96%E5%99%A8%E7%9B%B8%E5%85%B3.md)
+
