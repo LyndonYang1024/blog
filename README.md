@@ -16,3 +16,5 @@
 
 ##### 2021-07-02: [openGauss优化器相关](https://github.com/YangHao666666/blog/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%BA%90%E7%A0%81%E7%9B%B8%E5%85%B3/openGauss/openGauss%E4%BC%98%E5%8C%96%E5%99%A8%E7%9B%B8%E5%85%B3.md)
 
+##### 2021-07-07: [codegen-jin相关](https://github.com/YangHao666666/blog/blob/master/database-design/executor/codegen-jit.md)
+
