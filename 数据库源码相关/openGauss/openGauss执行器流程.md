@@ -8,7 +8,7 @@
 
 ![iterater-exec](./iterater-exec.png)
 
-​	火山模型是一种经典的基于行的流式迭代模型，例如Oracle，SQL Server，db2，MySQL，postgresql，Greenplum，doris等都是使用的该模式。
+​	火山模型是一种经典的基于行的流式迭代模型，例如Oracle，SQL Server，MySQL，postgresql，Greenplum，doris等都是使用的该模式。
 
 ​	火山模型模型中，所有的运算符(operator)都被看成是一个迭代器，它们都提供一组简单的接口：init/open()—next()—end/close()，查询计划树由一个个这样的关系运算符组成，每一次的next()调用，运算符就返回一行(Row)，数据通过运算符自上而下的next()嵌套调用而被动的进行拉取。
 
