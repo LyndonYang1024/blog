@@ -20,3 +20,5 @@
 
 ##### 2021-07-09: [执行器](https://github.com/YangHao666666/blog/blob/master/database-design/executor/%E6%89%A7%E8%A1%8C%E5%99%A8.md)
 
+##### 2021-07-19: [openGauss使用总结](https://github.com/YangHao666666/blog/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/openGauss%E6%80%BB%E7%BB%93.md)
+
