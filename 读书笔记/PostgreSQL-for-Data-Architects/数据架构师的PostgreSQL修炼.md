@@ -31,4 +31,6 @@
    drop extension dblink;
    ```
 
-3. 
+3. **pg_relation_filepath**可以查看表的数据文件路径
+
+4. 
