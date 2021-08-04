@@ -24,5 +24,5 @@
 
 ##### 2021-07-20: [性能相关](https://github.com/YangHao666666/blog/blob/master/code-related/%E6%80%A7%E8%83%BD%E7%9B%B8%E5%85%B3.md)
 
-##### 2021-07-22: [数据架构师的PostgreSQL修炼](https://github.com/YangHao666666/blog/blob/master/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/PostgreSQL-for-Data-Architects/%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9A%84PostgreSQL%E4%BF%AE%E7%82%BC.md)
+##### 2021-07-22: [postgres总结](https://github.com/YangHao666666/blog/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3/postgres%E6%80%BB%E7%BB%93.md)
 
