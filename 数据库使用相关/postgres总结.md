@@ -31,4 +31,37 @@
 
 3. **pg_relation_filepath**可以查看表的数据文件路径
 
-4. 
+4. **保存点（savepoint）：**当一个事务中出现错误的时候，可以返回到savepoint的位置
+
+   ```sql
+   postgres=# begin;
+   BEGIN
+   postgres=*# select count(*) from t;
+    count
+   -------
+        0
+   (1 row)
+   
+   postgres=*# savepoint a;
+   SAVEPOINT
+   postgres=*# select 2 / 0;
+   ERROR:  division by zero
+   postgres=!# rollback to sav
+   
+   postgres=!# rollback to save
+   
+   postgres=!# rollback to savepoint a;
+   ROLLBACK
+   postgres=*# select 3;
+    ?column?
+   ----------
+           3
+   (1 row)
+   
+   postgres=*# commit;
+   COMMIT
+   ```
+
+   
+
+5. 
