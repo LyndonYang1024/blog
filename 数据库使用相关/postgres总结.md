@@ -86,7 +86,29 @@
     pg_global  | lyndonyang |
    (2 rows)
    
-   3. 查看表索引占用空间
+   3. 查看schema列表
+   postgres=# \dn
+      List of schemas
+     Name  |   Owner
+   --------+------------
+    public | lyndonyang
+    test   | lyndonyang
+   (2 rows)
+   
+   4. 查看所有用户\du或者\dg
+   postgres=# \du
+                                       List of roles
+    Role name  |                         Attributes                         | Member of
+   ------------+------------------------------------------------------------+-----------
+    lyndonyang | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+   
+   postgres=# \dg
+                                       List of roles
+    Role name  |                         Attributes                         | Member of
+   ------------+------------------------------------------------------------+-----------
+    lyndonyang | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+   
+   5. 查看表索引占用空间
    postgres=# \dt+ t
                                        List of relations
     Schema | Name | Type  |   Owner    | Persistence | Access method |  Size   | Description
@@ -101,14 +123,14 @@
     public | i1   | index | lyndonyang | t     | permanent   | btree         | 2208 kB |
    (1 row)
    
-   4. 查看函数代码
+   6. 查看函数代码
    postgres=# \sf test
    CREATE OR REPLACE FUNCTION public.test()
     RETURNS void
     LANGUAGE sql
    AS $function$ insert into t values(100); $function$
    
-   5. 获取元数据命令对应的sql语句
+   7. -E选项 获取元数据命令对应的sql语句
    lyndonyang@localhost:~$ psql -E -d postgres
    psql (15devel)
    Type "help" for help.
@@ -134,11 +156,11 @@
     public | t    | table | lyndonyang
    (1 row)
    
-   6. psql -t选项只显示记录数据，而不现实schema
+   8. psql -t选项只显示记录数据，而不现实schema
    lyndonyang@localhost:~$ psql -t -c "select * from t limit 1" -d postgres
      1
    
-   7. 传递变量到sql
+   9. 传递变量到sql
    postgres=# \set val 10
    postgres=# select * from t where c1 = :val;
     c1
@@ -146,12 +168,13 @@
     10
    (1 row)
    
-   8. psql通过-v选项传递参数给数据库
+   10. psql通过-v选项传递参数给数据库
    psql -v val= 10 -d postgres -f select.sql
    
+   11. 查看所有支持的命令  \?
    ```
 
-6. postgres数据文件的命名规则为：<relfilenode>.<顺序号>，文件以1G位切割点，没增加1G，生成一个新文件，后缀为_fsm和 _vm的两个文件是空闲空间映射表文件和可见性映射表文件
+6. postgres数据文件的命名规则为：<relfilenode>.<顺序号>，文件以1G位切割点，每增加1G，生成一个新文件，后缀为_fsm和 _vm的两个文件是空闲空间映射表文件和可见性映射表文件
 
 7. postgres数据读写以page为最小单位，page tuple的内部结构
 
@@ -174,3 +197,13 @@
 11. 可以通过调整**work_mem**的大小来控制sort和hash切换磁盘
 
 12. postgres物理复制核心原理是主库将预写日志WAL日志发送给备库，备库接收到WAL日志后进行重做，因此流复制是基于WAL日志文件的物理复制
+
+13. 创建数据库的时候可以通过指定**connlimit**参数来限制可以并发连接数据库的个数
+
+14. **json和jsonb**
+
+    json:存储输入文本的精准存储，处理函数在每次执行时必须重新解析该数据
+
+    jsonb:这种类型的数据被存储在一种分解好的二进制格式中，当插入这种类型的数据时要慢一些，因为需要进行附加转换，但是			jsonb类型数据的处理速度要快得多，因为不需要解析，此外jsonb类型也支持索引
+
+15. 
